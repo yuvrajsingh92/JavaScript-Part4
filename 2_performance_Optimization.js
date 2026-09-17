@@ -70,3 +70,13 @@
 // images.forEach((image) => {
 //   observer.observe(image);
 // });
+
+// ! code splitting
+// ! What is code splitting:Code splitting is the process in which we don't load all the n number of line of code but the only code which is requried at that time and rest of it when the action happens based on action
+
+// const btn = document.querySelector("#btn");
+
+// btn.addEventListener("click", async function () {
+//   let heavyfunction = await import("./heavy.js");
+//   heavyfunction.veryHeavy();
+// });
