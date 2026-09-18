@@ -80,3 +80,49 @@
 //   let heavyfunction = await import("./heavy.js");
 //   heavyfunction.veryHeavy();
 // });
+
+// const ul = document.querySelector("ul");
+
+// for (let i = 0; i <= 100; i++) {
+//   let li = document.createElement("li");
+//   li.textContent = i;
+//   ul.appendChild(li);
+// } // ? What if we wanted to add 10000 li if we do it by this way the webpage will take a long time to load and the website will be lagge
+
+// ! In this same case we can use fragement
+
+// const ul = document.querySelector("ul");
+// let space = document.createDocumentFragment();
+
+// for (let i = 0; i <= 100; i++) {
+//   let li = document.createElement("li");
+//   li.textContent = i;
+//   space.appendChild(li);
+// }
+
+// ul.appendChild(space);
+
+// ! Memory leaks in setinterval
+
+// let timer = 1;
+
+// setInterval(() => {
+//   if (timer <= 10) {
+//     console.log(timer);
+//     timer++;
+//   } else {
+//     console.log("Ayush");
+//   }
+// }, 500); // ? We think that this ones the condition get satisfied the setinterval will stop but thier is leak
+
+// let timer = 1;
+
+// let int = setInterval(() => {
+//   if (timer <= 10) {
+//     console.log(timer);
+//     timer++;
+//   } else {
+//     clearInterval(int);
+//     console.log("Finined");
+//   }
+// }, 500);
